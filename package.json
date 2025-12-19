@@ -1,6 +1,6 @@
 {
   "name": "clean-context",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Robust, safety-first code cleaner for AI context. Strips comments while protecting strings, URLs, and regex.",
   "main": "src/index.js",
   "bin": {
