@@ -2,25 +2,25 @@
 
 **The robust code cleaner for AI context generation.**
 
+<p>
+  <img src="https://img.shields.io/npm/v/clean-context.svg?style=flat-square&color=d25353" alt="npm version">
+  <img src="https://img.shields.io/bundlephobia/minzip/clean-context?style=flat-square&color=38bd24" alt="size">
+  <img src="https://img.shields.io/npm/dt/clean-context.svg?style=flat-square&color=success&color=38bd24" alt="npm downloads">
+  <img src="https://img.shields.io/github/license/mgks/clean-context.svg?style=flat-square&color=blue" alt="license">
+</p>
+
+<img width="720" src="https://github.com/mgks/clean-context/blob/main/preview.gif?raw=true">
+
 `clean-context` strips comments and whitespace noise from code files. Unlike standard compilers, it is designed for **LLM Context**, meaning it prioritizes token reduction while strictly protecting strings, URLs, and Regex literals.
 
-  <a href="https://www.npmjs.com/package/clean-context"><img src="https://img.shields.io/npm/v/clean-context.svg?style=flat-square&color=007acc" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/clean-context"><img src="https://img.shields.io/npm/dt/clean-context.svg?style=flat-square&color=success" alt="npm downloads"></a>
-  <a href="https://github.com/mgks/clean-context/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mgks/clean-context.svg?style=flat-square&color=blue" alt="license"></a>
-  <a href="https://github.com/mgks/clean-context/stargazers"><img src="https://img.shields.io/github/stars/mgks/clean-context?style=flat-square&logo=github" alt="stars"></a>
-
-## ⚡️ Why clean-context?
-
-<p align="">
-  <img src="https://github.com/mgks/clean-context/blob/main/preview.gif?raw=true" width="720">
-</p>
+## Features
 
 - **Token Efficient**: Drastically reduces file size for LLM prompts.
 - **Safety First**: Uses a "Consumer Pattern" regex strategy to ensure `http://website.com` inside a string isn't truncated by `//`.
 - **Smart Line Removal**: Automatically removes the empty whitespace left behind when a full-line comment is deleted.
 - **Zero Dependencies**: Lightweight and fast.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### CLI
 
@@ -48,7 +48,7 @@ const raw = `const x = 10; // comment`;
 const result = clean(raw, { lang: '.js' });
 ```
 
-## { } Supported Languages
+## Supported Languages
 
 `clean-context` supports **40+ languages** out of the box by mapping file extensions to robust stripping strategies.
 
@@ -75,7 +75,7 @@ If a specific extension isn't listed, you can force a strategy using the `--lang
 - Use `.py` for any Hash-style language (supports `#`).
 - Use `.html` for any XML-style language (supports `<!-- -->`).
 
-## 🛡️ Safety Features
+## Safety Features
 
 We take extra care not to break your code context.
 
